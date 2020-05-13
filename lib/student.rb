@@ -19,6 +19,11 @@ class Student
 
   def add_student_attributes(attributes_hash)
     @twitter = attributes_hash[:twitter]
+    @github = attributes_hash[:github]
+    @blog = attributes_hash[:blog]
+    @twitter = attributes_hash[:twitter]
+    @twitter = attributes_hash[:twitter]
+    @twitter = attributes_hash[:twitter]
   end
 
   def self.all
