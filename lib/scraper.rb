@@ -43,7 +43,7 @@ class Scraper
       link = x["href"]
       
       if link.include? "twitter"
-        student_hash[:]  = link
+        student_hash[:twitter]  = link
       elsif link.include? "linkedin"
         student_hash[:]  = link
       elsif link.include? "github"
