@@ -45,16 +45,16 @@ class Scraper
       if link.include? "twitter"
         student_hash[:twitter]  = link
       elsif link.include? "linkedin"
-        student_hash[:]  = link
+        student_hash[:linkedin]  = link
       elsif link.include? "github"
-        student_hash[:]  = link
+        student_hash[:github]  = link
       else 
-        student_hash[:]  = link
+        student_hash[:blog]  = link
       end
     end
     
-    student_hash[:] = doc.css(".profile-quote").text
-    student_hash[:]  = doc.css(".details-container").css(".bio-block.details-block").css(".bio-content.content-holder").css(".description-holder").css("p").text
+    student_hash[:profile_quote] = doc.css(".profile-quote").text
+    student_hash[:bio]  = doc.css(".details-container").css(".bio-block.details-block").css(".bio-content.content-holder").css(".description-holder").css("p").text
     
     return student_hash
   end
